@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -41,9 +41,13 @@ main img {
   flex-direction: column;
 }
 
+
 .item {
+  width: 100%;
+  
   flex: 1;
-  margin: 10px;
+  padding: 10px 0 20px 0;
+  justify-content: center;
 }
 
 .item-double {
@@ -54,7 +58,7 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 0px 5px 0px;
   text-align: center;
 }
 
@@ -62,6 +66,20 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  padding: 0px;
+}
+
+ul{
+  margin: 10px 0 10px 0;
+  padding-inline-start: 10px;
 }
 
 header nav ul li {
@@ -72,6 +90,7 @@ header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+  
 }
 
 header nav ul li a:hover {
@@ -83,25 +102,38 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  
 }
 
 form label {
   font-weight: bold;
 }
 
+
+
 form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  padding: 2px;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
   font-size: 24px;
-  padding: 15px;
-  width: 100%;
+  width:100%;
+  
 }
 
 /* -------  Footer ------- */
@@ -117,3 +149,75 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .formie {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 10px;
+    
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+
+  .justify{
+    text-align: justify;
+    
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 20px;
+    padding: 20px 0 20px 0;
+
+  }
+  form button {
+    margin: 10px;
+  }
+ 
+ .item{
+   display: flex;
+   flex-direction: row; 
+   padding: 0px;
+ }
+ h3 {
+   display: flex;
+   flex-direction: column
+ }
+
+  .rows {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr)
+ }
+ .rowing {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   text-align: center;
+   list-style-position: inside;
+   align-items: center;
+   gap: 20px;
+   margin: 20px;
+ }
+
+
+ .wrapper {
+   display: flex;
+   flex-direction: column;
+ }
+
+}
